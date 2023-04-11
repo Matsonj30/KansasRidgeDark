@@ -1,0 +1,100 @@
+//-------------------------------COLORS---------------------------------
+$primaryColor: #FAFAFA;
+$secondaryColor: #1B7CC1;
+//$secondaryColor: #186CC0;
+$secondaryShade--: #025b6d13;
+$secondaryShade--: #E7EEEF;
+$secondaryShade--: #dee3e4; //temp
+$greycolor: rgba(129, 129, 129, 0.089);
+//-------------------------------COLORS---------------------------------
+
+
+//-------------------------------FONTS---------------------------------
+@font-face{
+  font-family: "Poppins";
+  font-style: normal;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+
+}
+@font-face{
+  font-family: "bold";
+  font-style: normal;
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+//-------------------------------FONTS---------------------------------
+
+//-------------------------------MULTI PURPOSE CSS---------------------------------
+*{
+  margin: 0;   
+  padding: 0;
+  font-family: "Poppins";
+
+  h1{
+    font-family: "bold";
+  }
+}
+
+body{
+    background-color: $primaryColor;
+    color: rgb(48, 47, 47);
+    width:100%;
+    overflow-x:hidden;
+    height: fit-content;
+    
+}
+
+html {
+  overflow-x: initial !important;
+  scroll-behavior: smooth;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+.header{
+  display: flex;
+  justify-content: center;
+  h1{
+    font-family: "bold";
+    font-size: 40px;
+
+  }
+
+  ::after{
+      display: block;
+      content: "";
+      border-bottom: 5px solid $secondaryColor;
+      transform: scaleX(0.3);
+      padding-bottom: 3px;
+      margin-bottom: 20px;
+  }
+}
+
+.headerDescription{
+  max-width: 600px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.section{
+  transform: translateY(-30px)
+}
+
+
+//-------------------------------MULTI PURPOSE CSS---------------------------------
+
+
+//-------------------------------IMPORTS---------------------------------
+@import "_landing.scss";
+@import "_burgerMenu.scss";
+@import "_introduction.scss";
+@import "_services.scss";
+@import "_pricing.scss";
+@import "_footer.scss";
+@import "_portfolio.scss";
+
+
+//-------------------------------IMPORTS---------------------------------

@@ -1,0 +1,65 @@
+#services{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+    z-index: 2;
+    padding-bottom: 100px;
+
+
+    .servicesContainer{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1401px;
+    }
+    .service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 250px;
+        background-color: $greycolor;
+        background-color: $secondaryShade--;
+        margin: 5px 5px;
+        border-radius: 15px;
+       
+        .fa{
+            font-size: 60px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: rgba(30, 175, 71, 0.475);
+            color: $secondaryColor;
+        }
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 5px;
+           
+        }
+        p{
+            font-size: 15px;
+            text-align: center;
+            padding: 5px 20px;
+        }
+    }
+    button{
+        width: 150px;
+        height: 50px;
+        margin-top: 20px;
+        background-color: transparent;
+        border: 3px solid $secondaryColor;
+        color: $secondaryColor;
+        border-radius: 5px;
+        font-size: 16px;
+        
+    }
+}
+@media(max-width:470px){
+    #services{
+        .service{
+            width: calc(min(400px, 100%));
+        }
+    }
+}

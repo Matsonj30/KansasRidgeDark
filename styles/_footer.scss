@@ -1,0 +1,107 @@
+footer{
+    width: 100%;
+    height: 275px;
+    background-color: $secondaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .section{
+        color: $primaryColor;
+        height: 176px;
+        ul{
+            list-style: none;
+            padding: 0px 3vw;
+            li{
+                transition: 0.25s ease-in-out;
+                padding-bottom: 10px;
+                :first-child{
+                    letter-spacing: 0.5px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $primaryColor;
+                    .fa{
+                        padding-right: 5px;
+                        width: 15px;
+                    }
+                }
+            }
+            li:not(:first-child):hover{
+                opacity: 50%;
+                cursor: pointer;
+            }
+            
+        }
+    }
+    .logoAndDescription{
+        display: flex;
+        align-items: center;
+        img{
+            width: 250px;
+            height: auto;
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+@media(max-width:1337px){
+    footer{
+        .section{
+            ul{
+                padding: 0px 15px;
+            }
+        }
+    }
+}
+@media(max-width:1187px){
+    footer{
+        flex-wrap: wrap;
+        height: fit-content;
+        .section{
+            width: 200px;
+            display: flex;
+            justify-content: center;
+
+        }
+        .contact{
+            width: 250px;
+        }
+        .logoAndDescription{
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 30px;
+            padding-bottom: 0px;
+            .footerLogo{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                
+            }
+            .description{
+                text-align: center;
+                p{
+                    font-size: 15px;
+                }
+            }
+         
+        }
+    }
+}
+
+@media(max-width:649px){
+    footer{
+        .section{
+         padding-bottom: 40px
+      
+        }
+        .logoAndDescription{
+            padding-bottom: 0px;
+        }
+        .contact{
+            text-align: center;
+
+ 
+        }
+    }
+}
