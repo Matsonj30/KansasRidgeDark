@@ -4,124 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Description">
     <meta name="description" content="100% uniquely designed websites created without page builders. We offer immense value starting at only $500">
 
+
+    <link rel="icon" href="../images/icon.webp">
 
     <link rel="icon" href="../images/icon.webp">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
     
-    <title>Small Business Web Design & Development!</title>
+    <title>Kansas Ridge Web Design</title>
 </head>
 
 <body>
 
 <!-------------------------------------------------------------------------------------->
-<!-----------------------------------LANDING-------------------------------------------->
+<!-----------------------------------NAVIGATION-------------------------------------------->
 <!-------------------------------------------------------------------------------------->
-    <div class="landing" id="landing">
-        <div class="navBar">
-        <img src="../images/logo.webp" alt="companyLogo">
-
-        
-
-        <div class= burgerMenu>
-            <input label="Toggle Menu" type="checkbox" id="burgerCheckbox" onclick="burgerMenu()"> <!--Have to be in same container to work-->
-            <span></span>
-            <span></span>
-            <span></span>
-            
-        </div>
-        <div class="hideOverFlow">
-            <div id="menu">
-                <ul>
-                <li><a  onclick="scrollToDiv('services')">Services</a></li>
-                <li><a  onclick="scrollToDiv('pricing')">Pricing</a></li>
-                <li><a  onclick="scrollToDiv('portfolio')">Portfolio</a></li>
-                <li><a  onclick="scrollToDiv('footer')">Contact</a></li>
-                </ul>
-            </div>
-            
-        </div>
-        
-        </div>
-        
-
-        <div class="introduction">
-        <img src="/images/desktopComputer.png" class="computerGraphic" alt="websitesOnScreen">
-        <img src="/images/phoneComputer.png" class="phoneGraphic">
-        <h1>Small Business Web Design & Development</h1>
-        <p>100% uniquely designed websites created without the use of wordpress or other page builders!</p>
-        <div class="learnMoreCallNow">
-            <a href="index.html"><button>Learn More</button></a>
-            <div class="callNow">
-                <p class ="fa fa-mobile"></p>
-                <div class="details">
-                    <p id="callNowAboveNumber">CALL NOW</p>
-                    <b>(403)913-5686</b>
-                </div>
-            </div>
-        </div>
-        </div>
-
+<div class="navigationBar">
+    <img src="/images/logo.webp" alt="companyLogo">
+    <div id="menu">
+        <ul>
+            <li><a  href="index.html" src="">Home</a></li>
+            <li><a  href="ourTeam.html" src="">Pricing</a></li>
+            <li><a  href="services.html" src="">Porfolio</a></li>
+            <li><a  href="contact.html" src="">Contact</a></li>
+        </ul>    
     </div>
+
+    <div class="hamburgerMenu">
+        <input type="checkbox" id="hamburgerCheckbox" onclick="burgerMenu()" label="checkboxForMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
 <!-------------------------------------------------------------------------------------->
-<!-----------------------------------LANDING-------------------------------------------->
+<!-----------------------------------NAVIGATION-------------------------------------------->
 <!-------------------------------------------------------------------------------------->
 
-    <div class=background><img src="../images/Wave2.svg" alt="waveEffect"></div>
+
+<!-------------------------------------------------------------------------------------->
+<!-----------------------------------HERO-------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+<div class="hero">
+    <h1>Small Business Web Design & Development</h1>
+    <p>100% uniquely designed websites created without the use of wordpress or other page builders!</p>
+    <div class="heroButtons">
+        <button class="mainButton">Get Started</button>
+        <div class="gradientBorder"><button class="secondaryButton">Our Pricing</button></div>
+    </div>
+</div>
+
+
+<!-------------------------------------------------------------------------------------->
+<!-----------------------------------HERO-------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------SERVICES------------------------------------------->
 <!-------------------------------------------------------------------------------------->
-    <div class="section" id="services">
-        <div class="header"><h1>WHAT WE DO</h1></div>
-        <div class="wrapper">
-            <div class="headerDescription">
-                <p>We specialize in creating websites for small business owners located in Alberta. Every page is written by hand without the use of page builders to ensure optimal security and performance. We realize that it makes little sense for small business owners to fork out thousands of dollars on a website, so we want to provide more affordable options that provide the utmost value to your business.</p>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="servicesContainer">
-                <div class="service service4">
-                    <div class="fa fa-mobile"></div>
-                    <h3>Mobile First Design</h3>
-                    <p>We start each website by building mobile first, then work our way up to larger screens such as desktops so customers can access your website from anywhere.</p>
-                </div>
-                <div class="service service1">
-                    <div class="fa fa-gears"></div>
-                    <h3>Optimization</h3>
-                    <p>With mobile first design, your website will be optimized for phones which account for over 60% of all internet traffic. </p>
-                </div>
-                <div class="service service2">
-                    <div class="fa fa-line-chart"></div>
-                    <h3>Increased Traffic</h3>
-                    <p>With mobile optimization alongside other search engine optomization (SEO) techniques, we are able to ensure your website is ranked favorably by Google.</p>
-                </div>
-                <div class="service service3">
-                    <div class="fa fa-lock"></div>
-                    <h3>Security</h3>
-                    <p>As we do not use page builders, we can also guarentee fewer security risks for your website.</p>
-                </div>
-                <div class="service service5">
-                    <div class="fa fa-phone"></div>
-                    <h3>Support</h3>
-                    <p>We are available around the clock to assist you in making any changes to your website in a timely matter.</p>
-                </div>
-                <div class="service service6">
-                    <div class="fa fa-server"></div>
-                    <h3>Hosting</h3>
-                    <p>Not only will we make your website, but we can also take care of hosting to free you of all website responsibility!</p>
 
-                </div>
-            
-            </div>
-        </div>
-    
-     
-       
-    </div>
-    
 
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------SERVICES------------------------------------------->
@@ -131,78 +77,6 @@
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------PRICING-------------------------------------------->
 <!-------------------------------------------------------------------------------------->
-<div class="section" id="pricing">
-    <div class="header"><h1>Pricing</h1></div>
-
-    <div class="wrapper">
-        <div class="headerDescription">
-            <p>Here are our price options! We offer both flat-rate and subscription based options that will accomodate every businesses budget. Subscription options have a minimum 6 month commitment.</p>
-        </div>
-    </div>
-    
- 
-    <div class="wrapper">
-        <div class="pricingContainer">
-            <div class="priceOption other">
-                <div class="priceBox">
-                    <h4>Basic</h4>
-                    <p>Starting at $700</p>
-                    <p class="addBorder">You Take Control</p>
-                    <div class="line"></div>
-                </div>
-                <div class="priceFeatures">
-                    <ul>
-                        <li><div class="fa fa-check"></div><p>Static website</p></li>
-                        <li><div class="fa fa-check"></div><p>Up to 5 pages</p></li>
-                        <li><div class="fa fa-check"></div><p>Basic search engine optimization</p></li>
-                        <li><div class="fa fa-check"></div><p>Price dependent on project complexity</p></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="priceOption popular">
-                <div class="fa fa-check topCheck"></div>
-                <div class="priceBox">
-                    <h4>Standard</h4>
-                    <p>$150 / Month</p>
-                    <p class="addBorder">Hosting + Support</p>
-                    <div class="line"></div>
-                </div>
-                <div class="priceFeatures">
-                    <ul>
-                        <li><div class="fa fa-check"></div><p>Static website</p></li>
-                        <li><div class="fa fa-check"></div><p>Up to 5 pages</p></li>
-                        <li><div class="fa fa-check"></div><p>Basic search engine optimization</p></li>
-                        <li><div class="fa fa-check"></div><p>Unlimited content changes</p></li>
-                        <li><div class="fa fa-check"></div><p>Hosting included</p></li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="priceOption other">
-                <div class="priceBox">
-                    <h4>Express</h4>
-                    <p>$200 / Month</p>
-                    <p class="addBorder">Hosting + Support + SEO</p>
-                    <div class="line"></div>
-                </div>
-                <div class="priceFeatures">
-                    <ul>
-                        <li><div class="fa fa-check"></div><p>Static website</p></li>
-                        <li><div class="fa fa-check"></div><p>Up to 5 pages</p></li>
-                        <li><div class="fa fa-check"></div><p>Monthly search engine optimization</p></li>
-                        <li><div class="fa fa-check"></div><p>Unlimited content changes</p></li>
-                        <li><div class="fa fa-check"></div><p>Hosting included</p></li>
-                        <li><div class="fa fa-check"></div><p>Google Analytics</p></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-
-</div>
 
 
 
@@ -214,25 +88,7 @@
 <!-----------------------------------PORTFOLIO------------------------------------------->
 <!-------------------------------------------------------------------------------------->
 
-<div class="section" id="portfolio">
-    <div class="header"><h1>Our Portfolio</h1></div>
 
-    <div class="wrapper">
-        <div class="headerDescription">
-            <p>Take a look at some of our samples!</p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="portfolioContainer">
-            <img src="../images/portfolio1.webp" alt="physioTherapySite">
-            <img src="../images/portfolio2.webp" alt="restaurauntSite">
-            <img src="../images/portfolio3.webp" alt="generalPurposeSite">
-        </div>
-    </div>
-
-
-</div>
 
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------PORTFOLIO------------------------------------------>
@@ -244,34 +100,7 @@
 <!-----------------------------------FOOTER--------------------------------------------->
 <!-------------------------------------------------------------------------------------->
 <footer id="footer">
-    <div class="logoAndDescription section">
-        <div class=footerLogo><img src="../images/logo.webp" alt="companyLogo"></div>
-    </div>
-    <div class="navigation section">
-       <ul>
-        <li><b>Company</b></li>
-        <li><a  onclick="scrollToDiv('landing')">Home</a></li>
-        <li><a  onclick="scrollToDiv('services')">About Us</a></li>
-        <li><a  onclick="scrollToDiv('pricing')">Pricing</a></li>
-        <li><a  onclick="scrollToDiv('portfolio')">Portfolio</a></li>
-       </ul>
-    </div>
-    <div class="services section">
-        <ul>
-            <li><b>Services</b></li>
-            <li><a><div class="fa fa-paint-brush"></div>Web Design</a></li>
-            <li><a><div class="fa fa-phone"></div>Maitenence</a></li>
-            <li><a><div class="fa fa-gears"></div>SEO Services</a></li>
-            <li><a><div class="fa fa-server"></div>Hosting</a></li>
-        </ul>
-    </div>
-    <div class="contact section">
-        <ul>
-            <li><b>Get In Touch</b></li>
-            <li><a><div class="fa fa-phone"></div>(403)913-5686</a></li>
-            <li><a href="mailto:KRWDinfo@gmail.com"><div class="fa fa-envelope"></div>KRWDinfo@gmail.com</a></li>
-        </ul>
-    </div>
+
 </footer>
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------FOOTER--------------------------------------------->

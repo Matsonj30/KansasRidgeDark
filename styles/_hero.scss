@@ -1,0 +1,25 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    color: $white;
+
+    h1{
+        font-size: 64px;
+        max-width: 800px;
+        text-align: center;
+    }
+    p{
+        margin-top: 15px;
+        max-width: 500px;
+        text-align: center;
+    }
+    .heroButtons{
+        margin-top: 15px;
+        .mainButton{
+            margin-bottom: 10px;
+        }
+    }
+}

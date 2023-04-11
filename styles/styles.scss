@@ -1,11 +1,19 @@
 //-------------------------------COLORS---------------------------------
-$primaryColor: #FAFAFA;
-$secondaryColor: #1B7CC1;
-//$secondaryColor: #186CC0;
-$secondaryShade--: #025b6d13;
-$secondaryShade--: #E7EEEF;
-$secondaryShade--: #dee3e4; //temp
-$greycolor: rgba(129, 129, 129, 0.089);
+$primaryColor: #1C2336;
+$primaryDark:  #fafafa;
+$primaryLight: #FAFAFA;
+
+$secondaryColor: #4862A4;
+$secondaryColorDark: #202020;
+$secondaryColorLight: #6F91EB;
+
+$accentColor: #644CA8;
+$accentColorDark: #e6242b;
+$accentColorLight: #77623b;;
+
+$white:  #FAFAFA;
+$black: #111111;
+//-------------------------
 //-------------------------------COLORS---------------------------------
 
 
@@ -29,58 +37,52 @@ $greycolor: rgba(129, 129, 129, 0.089);
   margin: 0;   
   padding: 0;
   font-family: "Poppins";
-
+  background-color: $primaryColor;
   h1{
     font-family: "bold";
   }
 }
 
-body{
-    background-color: $primaryColor;
-    color: rgb(48, 47, 47);
-    width:100%;
-    overflow-x:hidden;
-    height: fit-content;
-    
-}
-
-html {
-  overflow-x: initial !important;
-  scroll-behavior: smooth;
-}
 
 .wrapper{
   display: flex;
   justify-content: center;
   width: 100%
 }
-.header{
-  display: flex;
-  justify-content: center;
-  h1{
-    font-family: "bold";
-    font-size: 40px;
 
-  }
-
-  ::after{
-      display: block;
-      content: "";
-      border-bottom: 5px solid $secondaryColor;
-      transform: scaleX(0.3);
-      padding-bottom: 3px;
-      margin-bottom: 20px;
-  }
+.mainButton{
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 30px;
+  border-radius: 100px;
+  color: $white;
+  border: none;
+  font-size: 18px;
+  font-family: "bold";
+  letter-spacing: 1px;
+  background: rgb(100,76,168);
+  background: linear-gradient(225deg, rgba(100,76,168,1) 0%, rgba(72,98,164,1) 100%);
 }
-
-.headerDescription{
-  max-width: 600px;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.section{
-  transform: translateY(-30px)
+.gradientBorder{
+      background: rgb(100,76,168);
+      background: linear-gradient(225deg, rgba(100,76,168,1) 0%, rgba(72,98,164,1) 100%);
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px 3px;
+  .secondaryButton{
+      width: fit-content;
+      height: fit-content;
+      padding: 12px 27px;
+      border-radius: 100px;
+      background: $primaryColor;
+      color: $white;
+      border: none;
+      font-size: 18px;
+      font-family: "bold";
+      letter-spacing: 1px;
+  }
 }
 
 
@@ -88,13 +90,7 @@ html {
 
 
 //-------------------------------IMPORTS---------------------------------
-@import "_landing.scss";
-@import "_burgerMenu.scss";
-@import "_introduction.scss";
-@import "_services.scss";
-@import "_pricing.scss";
-@import "_footer.scss";
-@import "_portfolio.scss";
 
-
+@import "_navigationBar.scss";
+@import "_hero.scss";
 //-------------------------------IMPORTS---------------------------------
