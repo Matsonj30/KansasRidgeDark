@@ -15,9 +15,10 @@
     .scrollContainer{
         display: flex;
         align-items: center;
+        width: 100%;
     }
     #imageContainer{
-        width: 320px;
+        width: 100%;
         overflow-x: scroll;
         display: flex;
         height: fit-content;
@@ -25,7 +26,7 @@
         scroll-behavior: smooth;
         img{
             
-            width: 320px;
+            width: 100%;
             border-radius: 20px;
             scroll-snap-align: start;
             margin: 0px 50px;

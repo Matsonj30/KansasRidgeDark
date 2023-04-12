@@ -304,9 +304,10 @@ body {
 .paginator .scrollContainer {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .paginator #imageContainer {
-  width: 320px;
+  width: 100%;
   overflow-x: scroll;
   display: flex;
   height: -moz-fit-content;
@@ -315,7 +316,7 @@ body {
   scroll-behavior: smooth;
 }
 .paginator #imageContainer img {
-  width: 320px;
+  width: 100%;
   border-radius: 20px;
   scroll-snap-align: start;
   margin: 0px 50px;
