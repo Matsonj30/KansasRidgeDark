@@ -1,0 +1,53 @@
+.paginator{
+    margin-top: 50px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .fa{
+        color: $white;
+        font-size: 40px;
+        display: none;
+    }
+    .scrollContainer{
+        display: flex;
+        align-items: center;
+    }
+    #imageContainer{
+        width: 320px;
+        overflow-x: scroll;
+        display: flex;
+        height: fit-content;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        img{
+            
+            width: 320px;
+            border-radius: 20px;
+            scroll-snap-align: start;
+            margin: 0px 50px;
+        }
+    }
+    .circles{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        span{
+            display: block;
+            background-color: #bebebe;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0px 2px;
+        }
+        #circle1{
+            background-color: #fafafa;
+        }
+    }
+    
+}

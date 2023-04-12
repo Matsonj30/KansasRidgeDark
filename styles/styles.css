@@ -12,10 +12,14 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins";
-  background-color: #1C2336;
 }
 * h1 {
   font-family: "bold";
+}
+
+body {
+  background-color: #1C2336;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -48,13 +52,17 @@
   justify-content: center;
   align-items: center;
   padding: 3px 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .gradientBorder .secondaryButton {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 12px 27px;
+  padding: 12px 30px;
   border-radius: 100px;
   background: #1C2336;
   color: #FAFAFA;
@@ -127,6 +135,7 @@
   left: -15px;
 }
 .hamburgerMenu span {
+  z-index: 7;
   display: block;
   width: 40px;
   height: 5px;
@@ -160,9 +169,10 @@
     justify-content: center;
   }
   .navigationBar img {
+    z-index: 10;
     width: 250px;
     top: 10px;
-    left: 75px;
+    left: 50px;
   }
   .navigationBar #menu {
     background-color: transparent;
@@ -205,15 +215,35 @@
     display: none;
   }
 }
+.hideOverflow {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+  z-index: -10;
+  position: absolute;
+  width: 50%;
+  height: 900px;
+  overflow-x: hidden;
+  top: -150px;
+  right: 0;
+}
+.hideOverflow .blueGradient {
+  width: 700px;
+  height: 700px;
+  background: rgb(72, 98, 164);
+  background: radial-gradient(circle, rgb(72, 98, 164) 0%, rgb(28, 35, 54) 64%);
+  animation: grow 10.5s infinite;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 20px;
   color: #FAFAFA;
+  position: relative;
 }
 .hero h1 {
-  font-size: 64px;
+  font-size: 40px;
   max-width: 800px;
   text-align: center;
 }
@@ -221,10 +251,89 @@
   margin-top: 15px;
   max-width: 500px;
   text-align: center;
+  padding: 0px 2px;
 }
 .hero .heroButtons {
   margin-top: 15px;
 }
 .hero .heroButtons .mainButton {
   margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    margin-top: 100px;
+  }
+  .hero h1 {
+    font-size: 64px;
+  }
+  .hero .heroButtons {
+    display: flex;
+  }
+  .hero .heroButtons .mainButton {
+    margin-right: 30px;
+  }
+}
+@keyframes grow {
+  0% {
+    width: 700px;
+    height: 700px;
+  }
+  50% {
+    width: 900px;
+    height: 900px;
+  }
+  100% {
+    width: 700px;
+    height: 700px;
+  }
+}
+.paginator {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.paginator .fa {
+  color: #FAFAFA;
+  font-size: 40px;
+  display: none;
+}
+.paginator .scrollContainer {
+  display: flex;
+  align-items: center;
+}
+.paginator #imageContainer {
+  width: 320px;
+  overflow-x: scroll;
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.paginator #imageContainer img {
+  width: 320px;
+  border-radius: 20px;
+  scroll-snap-align: start;
+  margin: 0px 50px;
+}
+.paginator .circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.paginator .circles span {
+  display: block;
+  background-color: #bebebe;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0px 2px;
+}
+.paginator .circles #circle1 {
+  background-color: #fafafa;
 }/*# sourceMappingURL=styles.css.map */

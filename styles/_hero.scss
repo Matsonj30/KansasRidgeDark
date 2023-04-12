@@ -1,13 +1,32 @@
+.hideOverflow{
+    clip-path: inset(0 0 0 0);
+    z-index: -10;
+    position: absolute;
+    width: 50%; //change this if we want to slide it right/left
+    height: 900px;
+    overflow-x: hidden;
+    top: -150px;
+    right: 0;
+    .blueGradient{
+        width: 700px;
+        height: 700px;
+        background: rgb(72,98,164);
+        background: radial-gradient(circle, rgba(72,98,164,1) 0%, rgba(28,35,54,1) 64%);
+        animation: grow 10.5s infinite;
+    }
+}
+
 .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-
+    margin-top: 20px;
     color: $white;
+    position: relative;
+
 
     h1{
-        font-size: 64px;
+        font-size: 40px;
         max-width: 800px;
         text-align: center;
     }
@@ -15,11 +34,45 @@
         margin-top: 15px;
         max-width: 500px;
         text-align: center;
+        padding: 0px 2px;
     }
     .heroButtons{
         margin-top: 15px;
         .mainButton{
             margin-bottom: 10px;
         }
+    }
+}
+
+@media(min-width:600px){
+    .hero{
+        margin-top: 100px;
+        h1{
+            font-size: 64px;
+        }
+        .heroButtons{
+        
+            display: flex;
+            .mainButton{
+                margin-right: 30px;
+            }
+        }
+    }
+
+
+}
+
+@keyframes grow{
+    0%{
+        width: 700px;
+        height: 700px;
+    }
+    50%{
+        width: 900px;
+        height: 900px;
+    }
+    100%{
+        width: 700px;
+        height: 700px;
     }
 }

@@ -37,12 +37,17 @@ $black: #111111;
   margin: 0;   
   padding: 0;
   font-family: "Poppins";
-  background-color: $primaryColor;
+
   h1{
     font-family: "bold";
   }
 }
+body{
+  background-color: $primaryColor;
+  overflow-x: hidden;
 
+
+}
 
 .wrapper{
   display: flex;
@@ -71,10 +76,12 @@ $black: #111111;
       justify-content: center;
       align-items: center;
       padding: 3px 3px;
+      width: fit-content;
+      height: fit-content;
   .secondaryButton{
       width: fit-content;
       height: fit-content;
-      padding: 12px 27px;
+      padding: 12px 30px;
       border-radius: 100px;
       background: $primaryColor;
       color: $white;
@@ -93,4 +100,5 @@ $black: #111111;
 
 @import "_navigationBar.scss";
 @import "_hero.scss";
+@import "_scroller.scss"
 //-------------------------------IMPORTS---------------------------------

@@ -49,7 +49,14 @@
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------HERO-------------------------------------------->
 <!-------------------------------------------------------------------------------------->
+<div class="hideOverflow">
+    <div class="blueGradient"></div>
+</div>
+
+
+
 <div class="hero">
+
     <h1>Small Business Web Design & Development</h1>
     <p>100% uniquely designed websites created without the use of wordpress or other page builders!</p>
     <div class="heroButtons">
@@ -65,12 +72,32 @@
 
 
 <!-------------------------------------------------------------------------------------->
-<!-----------------------------------SERVICES------------------------------------------->
+<!-----------------------------------scroller------------------------------------------->
 <!-------------------------------------------------------------------------------------->
+<div class="paginator">
 
+    <div class="scrollContainer">
+        <div onclick="changeIndex(-1)" class="fa fa-arrow-left arrow"></div>
+        <div id="imageContainer">
+            <img class="image" id=image0 src="../images/portfolio2.webp">
+            <img class="image" id=image1 src="../images/portfolio1.webp">
+            <img class="image" id=image2 src="../images/portfolio5.PNG">
+            <img class="image" id=image3 src="../images/portfolio2.webp">
+            <img class="image" id=image4 src="../images/portfolio1.webp">
+        </div>
+        <div onclick="changeIndex(1)" class="fa fa-arrow-right arrow"></div>
+    </div>
+    <div class="circles">
+        <span id="circle0"></span>
+        <span id="circle1"></span>
+        <span id="circle2"></span>
+        <span id="circle3"></span>
+        <span id="circle4"></span>
+    </div>
+</div>
 
 <!-------------------------------------------------------------------------------------->
-<!-----------------------------------SERVICES------------------------------------------->
+<!-----------------------------------scroller------------------------------------------->
 <!-------------------------------------------------------------------------------------->
 
 
