@@ -49,6 +49,7 @@ function getCurrentIndex(){
     var widthOfTestimonial = indicies[0].offsetWidth; //all same width
     var currentIndex = Math.floor(positionInContainer / widthOfTestimonial);
     //If you add too much padding, it may get the wrong index if you add a lot of elements
+
     return currentIndex;
 }
 
@@ -57,6 +58,7 @@ function scrollEvent(){
     changeCircleColor(getCurrentIndex())
 }
 function changeCircleColor(currentIndex){
+  
     for(i = 0; i <= 4; i+=1){
         var circle = document.getElementById("circle"+i)
         if(currentIndex == i){
@@ -66,5 +68,7 @@ function changeCircleColor(currentIndex){
             circle.style.backgroundColor = "#bdbdbd"
         }
     }
-
+    if(currentIndex > 4){
+        document.getElementById("circle4").style.backgroundColor = "#fafafa";
+    }
 }
