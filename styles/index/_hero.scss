@@ -1,0 +1,44 @@
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: $white;
+    position: relative;
+    padding: 0px 5px;
+
+
+    p{
+        margin-top: 15px;
+        max-width: 500px;
+        text-align: center;
+        padding: 0px 2px;
+    }
+    .heroButtons{
+        margin-top: 15px;
+        .mainButton{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media(min-width:600px){
+    .hero{
+        margin-top: 50px;
+        h1{
+            font-size: 64px;
+        }
+        .heroButtons{
+        
+            display: flex;
+            .mainButton{
+                margin-right: 30px;
+            }
+        }
+    }
+
+
+}
+

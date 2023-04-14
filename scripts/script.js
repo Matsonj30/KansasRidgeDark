@@ -38,7 +38,7 @@ function changeIndex(direction){
     }
    
     var nextDestination = document.getElementById("image"+ (nextIndex)); 
-    nextDestination.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    nextDestination.scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"});
 
 }
 function getCurrentIndex(){

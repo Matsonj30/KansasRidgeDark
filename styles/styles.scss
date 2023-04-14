@@ -93,12 +93,83 @@ body{
 }
 
 
+
+
+
+.hideOverflowBlue{
+  z-index: -10;
+  position: absolute;
+  width: 50%; //change this if we want to slide it right/left
+  height: 900px;
+  overflow-x: hidden;
+  top: -150px;
+  right: 0;
+  .blueGradient{
+      width: 700px;
+      height: 700px;
+
+      background: radial-gradient(circle, $secondaryColor 0%, rgba(28,35,54,0) 64%);
+      animation: grow 10.5s infinite;
+  }
+}
+.hideOverflowPurple{
+  z-index: -11;
+  @extend .hideOverflowBlue;
+  left: 0px;
+  top: 480px;
+  width: 100%;
+  .purpleGradient{
+    transform: translateX(-350px);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, $accentColor 0%, rgba(28, 35, 54, 0) 64%);
+    animation: grow 8.5s infinite;
+  }
+}
+
+@keyframes grow{
+  0%{
+      width: 700px;
+      height: 700px;
+  }
+  50%{
+      width: 900px;
+      height: 900px;
+  }
+  100%{
+      width: 700px;
+      height: 700px;
+  }
+}
+
+
+
+
+
+.header{
+  font-size: 40px;
+  max-width: 800px;
+  text-align: center;
+  color: $white;
+}
+.headerDescription{
+  color: $white;
+  text-align: center;
+  padding: 0px 5px;
+  max-width: 700px;
+}
+@media(min-width:600px){
+  .header{
+    font-size: 64px;
+  }
+}
 //-------------------------------MULTI PURPOSE CSS---------------------------------
 
 
 //-------------------------------IMPORTS---------------------------------
 
 @import "_navigationBar.scss";
-@import "_hero.scss";
-@import "_scroller.scss"
+@import "index/_hero.scss";
+@import "index/_scroller.scss";
+@import "index/_pricing.scss";
 //-------------------------------IMPORTS---------------------------------
