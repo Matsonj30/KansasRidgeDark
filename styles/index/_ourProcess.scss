@@ -5,14 +5,14 @@
 
     .processContainer{
         margin-top: 30px;
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         .process{
             position: relative;
-            width: 475px;
-            height: 300px;
+            width: 350px;
+            min-height: 400px;
             background-color: #161b276b;
             display: flex;
             flex-direction: column;
