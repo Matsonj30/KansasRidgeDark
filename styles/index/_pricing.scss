@@ -3,23 +3,28 @@
     padding-bottom: 50px;
     .pricingContainer{
         max-width: 1300px;
-       
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         .popular{
-            border: 4px solid $secondaryColor;
+            border: 1px solid $accentColor;
             position: relative;
+            border-image: linear-gradient($accentColor, $secondaryColor) 1;
+            box-shadow: 10px 0 30px #1a0b25, -10px 0 30px #0a0d36;
         }
         .other{
-            border: 4px solid $secondaryColor;
+            border: 1px solid $grayDark;
+            border-image: linear-gradient($gray, $primaryColor) 1;
         }
         .priceOption{
             width: calc(min(355px,97%));
             height: 450px;
-            background-color: $primaryColor;
+        
             border-radius: 10px;
             margin: 15px 0px;
+            transition: 0.5s ease-in-out;
+
             .topCheck{
                 position: absolute;
                 top: 10px;
@@ -28,43 +33,54 @@
                 color: $primaryColor;
             }
             .priceBox{
-                
+              
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 
                 h4{
-                    font-size: 50px;
+                    font-size: 40px;
                     font-weight: 100;
-                    
+                    color: $white;
                 }
                 p{
                    
-                    font-weight: 600;
+                    font-weight: 400;
                     transform: translateY(-6px);
                     padding-bottom: 11px;
+                    padding-top: 4px;
+                    color: $white;
+                    letter-spacing: 1px;
+                    font-size: 24px;
+                    
                 }
                 .addBorder{
                     position: relative;
                     width: fit-content;
                     height: 20px;
-                    padding: 0px 15px;
-                    border: 1px solid $secondaryColor;
-                    color: $secondaryColor;
+                    padding: 3px 15px;
+                    border: 2px solid $secondaryColorDark;
+                    color: $accentColor;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border-radius: 300px;
                     z-index: 1;
                     background-color: $primaryColor;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: $accentColor;
+                    letter-spacing: 1px;
+                 
                 }
                 .line{
                     position: relative;
                     width: 290px;
                     height: 1px;
-                    border-top: 1px solid $secondaryColor;
+                    border-top: 2px solid $secondaryColorDark;
                     z-index: 0;
-                    transform: translateY(-16px);
+                    transform: translateY(-20px);
+
                 }
             }
             .priceFeatures{
@@ -76,9 +92,10 @@
                         padding-top: 15px;
                         padding-left: 9px;
                         font-size: 18px;
+                        color: $white;
                         .fa{    
                             position: relative;
-                            color: $secondaryColor;
+                            color: $accentColor;
                             font-size: 20px;
                             padding-right: 7px;
                             transform: translateY(4px);
@@ -87,6 +104,9 @@
                 }
             }
            
+        }
+        .priceOption:hover{
+
         }
         .popular::before{
             width: 0;
@@ -98,8 +118,8 @@
             content: "";
             border-style: solid;
             border-width: 64px 64px 0px 0px;
-            border-color: $secondaryColor transparent;
-           
+            border-color: $accentColor transparent;
+            border-radius: 0px 0px 0px;
         }
     }
 }
@@ -111,7 +131,7 @@
             flex-wrap: wrap;
             width: 1400px;
             .priceOption{
-                margin: 15px 15px !important;
+                margin: 15px 30px !important;
     
                 .priceFeatures{
                     ul{
@@ -124,3 +144,35 @@
     }
     
 }
+
+
+@keyframes glowPurple{
+    0%{
+      border-color: $accentColor;
+      box-shadow: 0px 0px 10px $accentColor;
+    }
+    40%{
+      border-color: $accentColor;
+      box-shadow: 0px 0px 10px $accentColor;
+    }
+    42%{
+      border-color: $accentColor;
+      box-shadow: none;
+    }
+    44%{
+      border-color: $accentColor;
+      box-shadow: 0px 0px 10px $accentColor;
+    }
+    46%{
+      border-color: $accentColor;
+      box-shadow: none;
+    }
+    48%{
+      border-color: $accentColor;
+      box-shadow: 0px 0px 10px $accentColor;
+    }
+    100%{
+      border-color: $accentColor;
+      box-shadow: 0px 0px 10px $accentColor;
+    }
+  }

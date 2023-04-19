@@ -1,0 +1,148 @@
+footer{
+    color: $white !important;
+    background-color: $accentColorDark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+     .section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        b{
+            letter-spacing: 1px;
+        }
+       
+        ul{
+            padding-bottom: 35px;
+            list-style: none;
+            width: 150px;
+            li{
+                padding: 5px 0px;
+                transition: 0.5s ease-in-out;
+                a{
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+            li:hover{
+                opacity: 0.4;
+                cursor: pointer;
+            }
+            li:first-child:hover{
+                opacity: 1;
+                cursor: auto;
+            }
+        }
+        
+        
+   
+     }
+    .logoAndDescription{
+     
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            max-width: 300px;
+            text-align: center;
+        }
+        img{
+            width: 150px;
+        }
+    }
+    .hours{
+        .fa{
+            padding-right: 5px;
+            font-size: 18px;
+        }
+        ul{
+            li{
+                b{
+                    display:inline-block;
+                    width: 50px;
+                }
+            }
+          
+        }
+    }
+    .contact{
+       
+        .fa{
+            width:20px;
+            height: 20px;
+              text-align: center;
+        }
+        .fa-instagram{
+            padding-top: 3px;
+            padding-right: 2px;
+        }
+    }
+}
+
+
+@media(min-width:1100px){
+    .copyright{
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+@media(min-width:800px){
+    footer{
+        flex-direction: row;
+        justify-content: center;
+        .section{
+            width: 200px;
+            height: 350px;
+        }
+        .logoAndDescription{
+            flex-basis: 100%;
+            height: fit-content;
+        }
+    }
+}
+@media(min-width:1300px){
+    footer{
+        justify-content: center;
+        .section{
+            padding-top: 49px;
+            margin: 0px 25px;
+        }
+        .logoAndDescription{
+            transform: translateY(-55px);
+            padding-top: 0px;
+            flex-basis: auto;
+            width: 250px !important;
+        }
+    }
+}
+
+
+.copyright{
+    background-color: #1d1819;
+    width: 100%;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .developer{
+        p{
+            font-size: 16px;   
+        }
+        a{
+            text-decoration: none;
+            color: $secondaryColor;
+        }
+        a:hover{
+            opacity: 0.5;
+        }
+   
+        display: flex;
+    }
+    
+}

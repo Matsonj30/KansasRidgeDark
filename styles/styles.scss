@@ -1,16 +1,18 @@
 //-------------------------------COLORS---------------------------------
-$primaryColor: #1C2336;
-$primaryDark:  #fafafa;
-$primaryLight: #FAFAFA;
+$primaryColor: #0e1118;
+$primaryDark:  #0a0c11;
+$primaryLight: #0e1118;
 
 $secondaryColor: #4862A4;
-$secondaryColorDark: #202020;
+$secondaryColorDark: #191b35;
 $secondaryColorLight: #6F91EB;
 
 $accentColor: #644CA8;
-$accentColorDark: #e6242b;
-$accentColorLight: #77623b;;
+$accentColorDark: #1a0b25;
+$accentColorLight: rgb(109, 108, 173);
 
+$gray: #898f9b;
+$grayDark: #8A8F98;
 $white:  #FAFAFA;
 $black: #111111;
 //-------------------------
@@ -58,15 +60,15 @@ body{
 .mainButton{
   width: fit-content;
   height: fit-content;
-  padding: 15px 30px;
+  padding: 12px 26px;
   border-radius: 100px;
   color: $white;
   border: none;
   font-size: 18px;
   font-family: "bold";
   letter-spacing: 1px;
-  background: rgb(100,76,168);
   background: linear-gradient(225deg, rgba(100,76,168,1) 0%, rgba(72,98,164,1) 100%);
+
 }
 .gradientBorder{
       background: rgb(100,76,168);
@@ -81,7 +83,7 @@ body{
   .secondaryButton{
       width: fit-content;
       height: fit-content;
-      padding: 12px 30px;
+      padding: 9px 23px;
       border-radius: 100px;
       background: $primaryColor;
       color: $white;
@@ -96,36 +98,7 @@ body{
 
 
 
-.hideOverflowBlue{
-  z-index: -10;
-  position: absolute;
-  width: 50%; //change this if we want to slide it right/left
-  height: 900px;
-  overflow-x: hidden;
-  top: -150px;
-  right: 0;
-  .blueGradient{
-      width: 700px;
-      height: 700px;
 
-      background: radial-gradient(circle, $secondaryColor 0%, rgba(28,35,54,0) 64%);
-      animation: grow 10.5s infinite;
-  }
-}
-.hideOverflowPurple{
-  z-index: -11;
-  @extend .hideOverflowBlue;
-  left: 0px;
-  top: 480px;
-  width: 100%;
-  .purpleGradient{
-    transform: translateX(-350px);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, $accentColor 0%, rgba(28, 35, 54, 0) 64%);
-    animation: grow 8.5s infinite;
-  }
-}
 
 @keyframes grow{
   0%{
@@ -153,7 +126,7 @@ body{
   color: $white;
 }
 .headerDescription{
-  color: $white;
+  color: $gray;
   text-align: center;
   padding: 0px 5px;
   max-width: 700px;
@@ -172,4 +145,7 @@ body{
 @import "index/_hero.scss";
 @import "index/_scroller.scss";
 @import "index/_pricing.scss";
+@import "_gradients.scss";
+@import "index/_ourProcess.scss";
+@import "_footer.scss"
 //-------------------------------IMPORTS---------------------------------

@@ -62,13 +62,13 @@ function changeCircleColor(currentIndex){
     for(i = 0; i <= 4; i+=1){
         var circle = document.getElementById("circle"+i)
         if(currentIndex == i){
-            circle.style.backgroundColor = "#fafafa"
+            circle.style.backgroundColor = "#6F91EB"
         }
         else{
-            circle.style.backgroundColor = "#bdbdbd"
+            circle.style.backgroundColor = "#4862A4"
         }
     }
     if(currentIndex > 4){
-        document.getElementById("circle4").style.backgroundColor = "#fafafa";
+        document.getElementById("circle4").style.backgroundColor = "#6F91EB";
     }
 }
