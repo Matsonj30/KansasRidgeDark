@@ -5,11 +5,11 @@ $primaryLight: #0e1118;
 
 $secondaryColor: #4862A4;
 $secondaryColorDark: #191b35;
-$secondaryColorLight: #6F91EB;
+$secondaryColorLight: #6aabe0;
 
 $accentColor: #644CA8;
 $accentColorDark: #1a0b25;
-$accentColorLight: rgb(109, 108, 173);
+$accentColorLight: #6d6cad;
 
 $gray: #898f9b;
 $grayDark: #8A8F98;
@@ -50,6 +50,19 @@ body{
 
 
 }
+::-webkit-scrollbar {
+  background-color: $primaryLight;
+  width: 15px;
+
+}
+::-webkit-scrollbar-track {
+  background-color: $primaryColor;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $secondaryColor;
+  border-radius: 30px;
+  height: 10px;
+}
 
 .wrapper{
   display: flex;
@@ -68,9 +81,13 @@ body{
   font-family: "bold";
   letter-spacing: 1px;
   background: linear-gradient(225deg, rgba(100,76,168,1) 0%, rgba(72,98,164,1) 100%);
-
+  cursor: pointer;
+}
+button:hover{
+  box-shadow: 7px 0 15px $secondaryColor, -7px 0 15px $accentColor;
 }
 .gradientBorder{
+  
       background: rgb(100,76,168);
       background: linear-gradient(225deg, rgba(100,76,168,1) 0%, rgba(72,98,164,1) 100%);
       border-radius: 100px;
@@ -81,6 +98,7 @@ body{
       width: fit-content;
       height: fit-content;
   .secondaryButton{
+    cursor: pointer;
       width: fit-content;
       height: fit-content;
       padding: 9px 23px;

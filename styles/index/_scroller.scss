@@ -6,32 +6,32 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    .arrow{
-        color: $white;
-        cursor: pointer;
-        display: none;
-        z-index: 1;
-        width: 60px;
-        height: 60px;
-        border: 3px solid $secondaryColorDark;
-        display: flex;
-        text-align: center;
-        border-radius: 20px;
-        transition: .3s ease-in-out;
-        p{
- 
-            line-height: 50px;
-            font-size: 100px;
-        }
-    }
-    .arrow:hover{
-        border-color: $secondaryColor;
-    }
+    
     .scrollContainer{
         display: flex;
         align-items: center;
         width: 100%;
-
+        .arrow{
+            color: $white;
+            cursor: pointer;
+            display: none !important;
+            z-index: 1;
+            width: 60px;
+            height: 60px;
+            border: 3px solid $secondaryColorDark;
+            display: flex;
+            text-align: center;
+            border-radius: 20px;
+            transition: .3s ease-in-out;
+            p{
+     
+                line-height: 50px;
+                font-size: 100px;
+            }
+        }
+        .arrow:hover{
+            border-color: $secondaryColor;
+        }
         #imageContainer{
             width: 100%;
             overflow-x: scroll;
@@ -51,6 +51,17 @@
                 margin: 0px 50px;
             }
         }
+        #imageContainer::-webkit-scrollbar {
+            background-color: $primaryLight;
+            height: 15px;
+        }
+        #imageContainer::-webkit-scrollbar-track {
+            background-color: $primaryColor;
+        }
+        #imageContainer::-webkit-scrollbar-thumb {
+            background-color: $secondaryColor;
+            border-radius: 30px;
+        }
     }
 
     .circles{
@@ -62,13 +73,13 @@
         span{
             display: block;
             background-color: $secondaryColor;
-            width: 20px;
-            height: 20px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             margin: 0px 2px;
         }
         #circle1{
-            background-color: $accentColor;
+            background-color: $secondaryColorLight;
         }
     }
     
@@ -92,17 +103,17 @@
 
 
 
-@media(min-width:1150px){
+@media(min-width:1200px){
     .paginator{
-        .arrow{
-            display: block;
-        }
+
      .scrollContainer{
         width: fit-content;
-        
+        .arrow{
+            display: block !important;
+        }
         #imageContainer{
             width: 1000px;
-            margin: 0px 50px;
+            margin: 0px 30px;
            
             img{
                 width: 1000px;
@@ -118,7 +129,7 @@
     }
 }
 
-@media(min-width:1300px){
+@media(min-width:1400px){
     .paginator{
      .scrollContainer{
 

@@ -22,6 +22,21 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  background-color: #0e1118;
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0e1118;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4862A4;
+  border-radius: 30px;
+  height: 10px;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -41,6 +56,11 @@ body {
   font-family: "bold";
   letter-spacing: 1px;
   background: linear-gradient(225deg, rgb(100, 76, 168) 0%, rgb(72, 98, 164) 100%);
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 7px 0 15px #4862A4, -7px 0 15px #644CA8;
 }
 
 .gradientBorder {
@@ -57,6 +77,7 @@ body {
   height: fit-content;
 }
 .gradientBorder .secondaryButton {
+  cursor: pointer;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -294,10 +315,15 @@ body {
   justify-content: center;
   position: relative;
 }
-.paginator .arrow {
+.paginator .scrollContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.paginator .scrollContainer .arrow {
   color: #FAFAFA;
   cursor: pointer;
-  display: none;
+  display: none !important;
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -307,17 +333,12 @@ body {
   border-radius: 20px;
   transition: 0.3s ease-in-out;
 }
-.paginator .arrow p {
+.paginator .scrollContainer .arrow p {
   line-height: 50px;
   font-size: 100px;
 }
-.paginator .arrow:hover {
+.paginator .scrollContainer .arrow:hover {
   border-color: #4862A4;
-}
-.paginator .scrollContainer {
-  display: flex;
-  align-items: center;
-  width: 100%;
 }
 .paginator .scrollContainer #imageContainer {
   width: 100%;
@@ -338,6 +359,17 @@ body {
   scroll-snap-align: start;
   margin: 0px 50px;
 }
+.paginator .scrollContainer #imageContainer::-webkit-scrollbar {
+  background-color: #0e1118;
+  height: 15px;
+}
+.paginator .scrollContainer #imageContainer::-webkit-scrollbar-track {
+  background-color: #0e1118;
+}
+.paginator .scrollContainer #imageContainer::-webkit-scrollbar-thumb {
+  background-color: #4862A4;
+  border-radius: 30px;
+}
 .paginator .circles {
   display: flex;
   justify-content: center;
@@ -347,13 +379,13 @@ body {
 .paginator .circles span {
   display: block;
   background-color: #4862A4;
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin: 0px 2px;
 }
 .paginator .circles #circle1 {
-  background-color: #644CA8;
+  background-color: #6aabe0;
 }
 
 @media (min-width: 600px) {
@@ -363,17 +395,17 @@ body {
        object-fit: unset;
   }
 }
-@media (min-width: 1150px) {
-  .paginator .arrow {
-    display: block;
-  }
+@media (min-width: 1200px) {
   .paginator .scrollContainer {
     width: -moz-fit-content;
     width: fit-content;
   }
+  .paginator .scrollContainer .arrow {
+    display: block !important;
+  }
   .paginator .scrollContainer #imageContainer {
     width: 1000px;
-    margin: 0px 50px;
+    margin: 0px 30px;
   }
   .paginator .scrollContainer #imageContainer img {
     width: 1000px;
@@ -385,7 +417,7 @@ body {
     display: none;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
   .paginator .scrollContainer #imageContainer {
     width: 1200px;
   }
@@ -415,14 +447,14 @@ body {
   align-items: center;
 }
 .pricing .pricingContainer .popular {
-  border: 1px solid #644CA8;
+  border: 2px solid #644CA8;
   position: relative;
   -o-border-image: linear-gradient(#644CA8, #4862A4) 1;
      border-image: linear-gradient(#644CA8, #4862A4) 1;
   box-shadow: 10px 0 30px #1a0b25, -10px 0 30px #0a0d36;
 }
 .pricing .pricingContainer .other {
-  border: 1px solid #8A8F98;
+  border: 2px solid #8A8F98;
   -o-border-image: linear-gradient(#898f9b, #0e1118) 1;
      border-image: linear-gradient(#898f9b, #0e1118) 1;
 }
@@ -430,7 +462,7 @@ body {
   width: min(400px, 97%);
   height: 500px;
   border-radius: 10px;
-  margin: 15px 0px;
+  margin: 15px 5px;
   transition: 0.5s ease-in-out;
 }
 .pricing .pricingContainer .priceOption .topCheck {
@@ -564,7 +596,7 @@ body {
 .hideOverflowBlue {
   z-index: -10;
   position: absolute;
-  width: 50%;
+  width: 320px;
   height: 900px;
   overflow-x: hidden;
   top: -150px;
@@ -574,7 +606,7 @@ body {
   position: absolute;
   width: 700px;
   height: 700px;
-  right: -400px;
+  right: -550px;
   background: radial-gradient(circle, rgb(47, 56, 97) 0%, rgba(28, 35, 54, 0) 64%);
   animation: grow 10.5s infinite;
 }
@@ -621,7 +653,7 @@ body {
   text-align: center;
   font-size: 50px;
   padding: 20px 0px;
-  color: rgb(109, 108, 173);
+  color: #6d6cad;
 }
 .ourProcess .processContainer .process h3 {
   padding-bottom: 20px;
@@ -643,8 +675,9 @@ body {
 }
 
 footer {
+  margin-top: 100px;
   color: #FAFAFA !important;
-  background-color: #1a0b25;
+  background-color: #0a0c11;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -671,6 +704,9 @@ footer .section ul li a {
   text-decoration: none;
   color: #FAFAFA;
 }
+footer .section ul li .fa {
+  color: #644CA8;
+}
 footer .section ul li:hover {
   opacity: 0.4;
   cursor: pointer;
@@ -679,7 +715,25 @@ footer .section ul li:first-child:hover {
   opacity: 1;
   cursor: auto;
 }
+footer .section ul li:first-child {
+  color: #644CA8;
+}
+footer .section ul li:first-child b {
+  color: #644CA8;
+  font-family: "bold";
+}
+footer .section .fa {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding-right: 3px;
+}
+footer .section .fa-instagram {
+  padding-top: 3px;
+  padding-right: 2px;
+}
 footer .logoAndDescription {
+  margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -690,7 +744,7 @@ footer .logoAndDescription p {
   text-align: center;
 }
 footer .logoAndDescription img {
-  width: 150px;
+  width: 250px;
 }
 footer .hours .fa {
   padding-right: 5px;
@@ -699,15 +753,6 @@ footer .hours .fa {
 footer .hours ul li b {
   display: inline-block;
   width: 50px;
-}
-footer .contact .fa {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-footer .contact .fa-instagram {
-  padding-top: 3px;
-  padding-right: 2px;
 }
 
 @media (min-width: 1100px) {
@@ -740,13 +785,12 @@ footer .contact .fa-instagram {
   }
   footer .logoAndDescription {
     transform: translateY(-55px);
-    padding-top: 0px;
     flex-basis: auto;
     width: 250px !important;
   }
 }
 .copyright {
-  background-color: #1d1819;
+  background-color: #07080c;
   width: 100%;
   color: #FAFAFA;
   display: flex;
@@ -761,7 +805,8 @@ footer .contact .fa-instagram {
 }
 .copyright .developer a {
   text-decoration: none;
-  color: #4862A4;
+  font-family: "bold";
+  color: #644CA8;
 }
 .copyright .developer a:hover {
   opacity: 0.5;

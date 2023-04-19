@@ -1,7 +1,7 @@
 .hideOverflowBlue{
     z-index: -10;
     position: absolute;
-    width: 50%; //change this if we want to slide it right/left
+    width: 320px; //change this if we want to slide it right/left
     height: 900px;
     overflow-x: hidden;
     top: -150px;
@@ -10,7 +10,7 @@
         position: absolute;
         width: 700px;
         height: 700px;
-        right: -400px;
+        right: -550px;
         background: radial-gradient(circle, rgb(47, 56, 97) 0%, rgba(28,35,54,0) 64%);
         animation: grow 10.5s infinite;
     }
