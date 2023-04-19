@@ -409,7 +409,7 @@ body {
   padding-bottom: 50px;
 }
 .pricing .pricingContainer {
-  max-width: 1300px;
+  max-width: 1500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -427,8 +427,8 @@ body {
      border-image: linear-gradient(#898f9b, #0e1118) 1;
 }
 .pricing .pricingContainer .priceOption {
-  width: min(355px, 97%);
-  height: 450px;
+  width: min(400px, 97%);
+  height: 500px;
   border-radius: 10px;
   margin: 15px 0px;
   transition: 0.5s ease-in-out;
@@ -595,7 +595,7 @@ body {
   position: relative;
   width: 350px;
   min-height: 400px;
-  background-color: rgba(22, 27, 39, 0.4196078431);
+  background-color: rgba(34, 41, 59, 0.4196078431);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -2,7 +2,7 @@
     margin-top: 50px;
     padding-bottom: 50px;
     .pricingContainer{
-        max-width: 1300px;
+        max-width: 1500px;
         
         display: flex;
         flex-direction: column;
@@ -18,8 +18,8 @@
             border-image: linear-gradient($gray, $primaryColor) 1;
         }
         .priceOption{
-            width: calc(min(355px,97%));
-            height: 450px;
+            width: calc(min(400px,97%));
+            height: 500px;
         
             border-radius: 10px;
             margin: 15px 0px;
