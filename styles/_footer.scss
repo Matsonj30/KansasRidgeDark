@@ -96,7 +96,12 @@ footer{
           
         }
     }
-
+    .contact{
+        ul{
+            width: 210px;
+            margin-left: 60px;
+        }
+    }
 }
 
 
@@ -118,6 +123,11 @@ footer{
             width: 200px;
             height: 350px;
         }
+        .contact{
+            ul{
+                margin-left: 30px;
+            }
+        }
         .logoAndDescription{
             flex-basis: 100%;
             height: fit-content;
@@ -130,6 +140,9 @@ footer{
         .section{
             padding-top: 49px;
             margin: 0px 25px;
+        }
+        .navigation{
+            margin-left: 100px;
         }
         .logoAndDescription{
             transform: translateY(-55px);

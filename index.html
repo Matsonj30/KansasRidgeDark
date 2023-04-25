@@ -21,16 +21,28 @@
 <body>
 
 <!-------------------------------------------------------------------------------------->
+<!-----------------------------------TOP BAR-------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+<div class="topBar">
+
+
+</div>
+<!-------------------------------------------------------------------------------------->
+<!-----------------------------------TOP BAR-------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------------------->
 <!-----------------------------------NAVIGATION-------------------------------------------->
 <!-------------------------------------------------------------------------------------->
 <div class="navigationBar">
     <img src="/images/logo.webp" alt="companyLogo">
     <div id="menu">
         <ul>
-            <li><a  href="index.html" src="">Home</a></li>
-            <li><a  href="ourTeam.html" src="">Pricing</a></li>
-            <li><a  href="services.html" src="">Porfolio</a></li>
-            <li><a  href="contact.html" src="">Contact</a></li>
+            <li onclick="scrollToDiv('hero')">Home</li>
+            <li onclick="scrollToDiv('whyUs')">About Us</li>
+            <li onclick="scrollToDiv('pricing')">Pricing</li>
+            <li onclick="scrollToDiv('ourProcess')">Our Process</li>
         </ul>    
     </div>
 
@@ -55,13 +67,13 @@
 
 
 
-<div class="hero">
+<div class="hero"  id="hero">
 
     <h1 class="header">Small Business Web Design & Development</h1>
     <p>100% uniquely designed websites created without the use of wordpress or other page builders!</p>
     <div class="heroButtons">
-        <button class="mainButton">Get Started ></button>
-        <div class="gradientBorder"><button class="secondaryButton">Our Pricing ></button></div>
+        <button class="mainButton" onclick="scrollToDiv('whyUs')">Get Started ></button>
+        <div class="gradientBorder" onclick="scrollToDiv('pricing')"><button class="secondaryButton">Our Pricing ></button></div>
     </div>
 </div>
 
@@ -81,14 +93,12 @@
 
         <div class="arrow" onclick="changeIndex(-1)" ><p>&#8249;</p></div>
         <div id="imageContainer">
-            <div class="hideOverflowPurple">
-                <div class="purpleGradient"></div>
-            </div>
-            <img class="image" id=image0 src="../images/portfolio2.webp">
-            <img class="image" id=image1 src="../images/portfolio1.webp">
-            <img class="image" id=image2 src="../images/portfolio5.PNG">
+
+            <img class="image" id=image0 src="../images/shearCreationz.webp">
+            <img class="image" id=image1 src="../images/hairImage.webp">
+            <img class="image" id=image2 src="../images/bakery.webp">
             <img class="image" id=image3 src="../images/portfolio2.webp">
-            <img class="image" id=image4 src="../images/portfolio1.webp">
+            <img class="image" id=image4 src="../images/burgerSnap.webp">
         </div>
         <div class="arrow" onclick="changeIndex(1)" ><p>&#8250;</p></div>
     </div>
@@ -111,7 +121,12 @@
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------Why Us------------------------------------------->
 <!-------------------------------------------------------------------------------------->
-<div class="whyUs">
+<div class="whyUs" id="whyUs">
+    <div class="hideOverflowPurple">
+        <div class="purpleGradient"></div>
+    </div>
+
+
     <div class="wrapper">
         <h1 class="header">Why Choose Us</h1>
     </div>
@@ -177,6 +192,9 @@
 
 </div>
 
+
+
+
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------Why Us------------------------------------------->
 <!-------------------------------------------------------------------------------------->
@@ -187,7 +205,7 @@
 <!-------------------------------------------------------------------------------------->
 
 
-<div class="pricing">
+<div class="pricing"  id="pricing">
     <div class="wrapper">
         <h1 class="header">Pricing</h1>
     </div>
@@ -272,7 +290,7 @@
 <!-------------------------------------------------------------------------------------->
 <!-----------------------------------PROCESS------------------------------------------->
 <!-------------------------------------------------------------------------------------->
-<div class="ourProcess">
+<div class="ourProcess"  id="ourProcess">
     <div class="wrapper">
         <h1 class="header">Our Process</h1>
     </div>
@@ -295,9 +313,9 @@
             </div>
         </div>
         <div class="process process2">
-            <span>3</span>
+            <span>2</span>
             <div class="fa fa-paint-brush"></div>
-            <h3>Rough Sketching</h3>
+            <h3>Sketching</h3>
             <div class="description">
               Now that we have a solid understanding of what you want, we will dive into our designing software to create a rough sketch of the website we discussed. After it is complete, we will ask for your input on what elements you do like, as well as what you would like changed.
             </div>
@@ -305,16 +323,16 @@
      
       
         <div class="process process4">
-            <span>4</span>
+            <span>3</span>
             <div class="fa fa-code"></div>
-            <h3>Development Begins</h3>
+            <h3>Development</h3>
             <div class="description">
-             After making changes to our sketches, we will begin developing your website. All development will be done on a temporary website so you can view our progress daily and request any new changes that you would like. 
+             After making changes to our sketches, we will begin developing your website. All development will be done on a temporary server so you can view our progress daily and request any changes as we go. 
             </div>
         </div>
 
         <div class="process process3">
-            <span>2</span>
+            <span>4</span>
             <div class="fa fa-cloud-upload"></div>
             <h3>Delivery</h3>
             <div class="description">
@@ -346,10 +364,10 @@
     <div class="navigation section">
        <ul>
         <li><b>Navigation</b></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="ourTeam.html">Our Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="selfCare.html">Self Care</a></li>
+        <li onclick="scrollToDiv('hero')">Home</li>
+        <li onclick="scrollToDiv('whyUs')">About Us</li>
+        <li onclick="scrollToDiv('pricing')">Pricing</li>
+        <li onclick="scrollToDiv('ourProcess')">Our Process</li>
        </ul>
     </div>
 
@@ -365,9 +383,9 @@
     <div class="contact section">
         <ul>
             <li><b>Contact Us</b></li>
-            <li><a href= "tel:780-672-2057"><div class="fa fa-phone"></div>(780) 672-2057</a></li>
+            <li><a href= "tel:780-913-5686"><div class="fa fa-phone"></div>(403) 913-5686</a></li>
             <li><a href="https://www.facebook.com/kansas.ridge.web.design"><div class="fa fa-facebook"></div>Facebook</a></li>
-            <li><a href="https://www.instagram.com/_hairimage/?fbclid=IwAR1KFUksxRR07E7YfmN08KMhaPyBeu0hoLPzWQZ5x4v1Kg-eYdv8bmSRcKE"><div class="fa fa-instagram"></div>_HairImage</a></li>
+            <li><a href="mailto:KRWDinfo@gmail.com"><div class="fa fa-envelope"></div>KRWDinfo@gmail.com</a></li>
         </ul>
     </div>
 

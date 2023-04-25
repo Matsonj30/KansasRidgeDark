@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 * h1 {
   font-family: "bold";
@@ -247,20 +248,19 @@ button:hover {
     width: fit-content;
     padding-left: 50px;
     padding-bottom: 0px;
-  }
-  .navigationBar #menu ul li a {
     font-size: 20px;
     color: #FAFAFA;
     font-family: "poppins";
+    cursor: pointer;
   }
-  .navigationBar #menu ul li :after {
+  .navigationBar #menu ul :after {
     display: block;
     content: "";
     border-bottom: 3px solid #644CA8;
     transform: scaleX(0);
     transition: 250ms ease-in-out;
   }
-  .navigationBar #menu ul li :hover::after {
+  .navigationBar #menu ul :hover::after {
     transform: scaleX(1);
     transform-origin: 50% 100%;
   }
@@ -350,6 +350,7 @@ button:hover {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 100px 0 200px #1a0b25, -100px 0 200px #191b35;
+  border-radius: 20px;
 }
 .paginator .scrollContainer #imageContainer img {
   width: 100%;
@@ -579,6 +580,7 @@ button:hover {
 }
 .whyUs {
   margin-top: 50px;
+  position: relative;
 }
 .whyUs .sellingPoints {
   display: flex;
@@ -633,7 +635,7 @@ button:hover {
     text-align: start;
   }
 }
-.hideOverflowBlue {
+.hideOverflowBlue, .hideOverflowPurple {
   z-index: -10;
   position: absolute;
   width: 320px;
@@ -642,12 +644,25 @@ button:hover {
   top: -150px;
   right: 0px;
 }
-.hideOverflowBlue .blueGradient {
+.hideOverflowBlue .blueGradient, .hideOverflowPurple .blueGradient {
   position: absolute;
   width: 700px;
   height: 700px;
   right: -550px;
   background: radial-gradient(circle, rgb(47, 56, 97) 0%, rgba(28, 35, 54, 0) 64%);
+  animation: grow 10.5s infinite;
+}
+
+.hideOverflowPurple {
+  top: 350px;
+  left: 0px;
+}
+.hideOverflowPurple .purpleGradient {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: -550px;
+  background: radial-gradient(circle, #483779 0%, rgba(127, 31, 218, 0) 64%);
   animation: grow 10.5s infinite;
 }
 
@@ -796,6 +811,10 @@ footer .hours ul li b {
   display: inline-block;
   width: 50px;
 }
+footer .contact ul {
+  width: 210px;
+  margin-left: 60px;
+}
 
 @media (min-width: 1100px) {
   .copyright p {
@@ -811,6 +830,9 @@ footer .hours ul li b {
     width: 200px;
     height: 350px;
   }
+  footer .contact ul {
+    margin-left: 30px;
+  }
   footer .logoAndDescription {
     flex-basis: 100%;
     height: -moz-fit-content;
@@ -824,6 +846,9 @@ footer .hours ul li b {
   footer .section {
     padding-top: 49px;
     margin: 0px 25px;
+  }
+  footer .navigation {
+    margin-left: 100px;
   }
   footer .logoAndDescription {
     transform: translateY(-55px);

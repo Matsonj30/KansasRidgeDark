@@ -16,8 +16,9 @@ function burgerMenu(){
 
 
 function scrollToDiv(location){
+    console.log(location)
     document.getElementById(location).scrollIntoView({behaviour: "smooth"});
-
+ 
 }
 
 
