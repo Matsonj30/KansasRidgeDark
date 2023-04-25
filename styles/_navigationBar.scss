@@ -14,7 +14,7 @@
     }
         #menu{
             position: fixed;
-            z-index: 6;
+            z-index: 20;
             top: 0;
             right: 0;
             display: flex;
@@ -35,27 +35,17 @@
                     padding-bottom: 30px;
                     width: 160px;
                     text-align: end;
-                    .fa{
-                        display: none
-                    }
-                    
-                    a{
-                        font-family: "bold";
-                        text-decoration: none;
-                        font-size: 25px;
-                        color: $white;
-               
-                    }
-                    a:hover{
-
-                    }
+                    font-family: "bold";
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: $white;
                 }
             }
         }
     }
     .hamburgerMenu{
         position: absolute;
-        z-index: 7;
+        z-index: 20;
         top: 40px;
         right: 30px;
         
