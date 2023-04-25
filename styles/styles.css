@@ -15,6 +15,7 @@
 }
 * h1 {
   font-family: "bold";
+  z-index: 10;
 }
 
 body {
@@ -149,7 +150,7 @@ button:hover {
   width: 200px;
   height: 100%;
   overflow: visible;
-  background-color: #644CA8;
+  background-color: #0e1118;
   transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transform: translateX(200px);
 }
@@ -194,7 +195,7 @@ button:hover {
   height: 5px;
   margin-bottom: 5px;
   border-radius: 5px;
-  background-color: #111111;
+  background-color: #FAFAFA;
   transition: 0.3s ease-in;
 }
 .hamburgerMenu span:nth-child(2) {
@@ -205,7 +206,6 @@ button:hover {
 }
 .hamburgerMenu input:checked ~ span {
   transform: rotate(45deg) translate(0px, 0px);
-  background-color: #4862A4;
 }
 .hamburgerMenu input:checked ~ span:nth-child(3) {
   opacity: 0;
@@ -276,6 +276,7 @@ button:hover {
   color: #FAFAFA;
   position: relative;
   padding: 0px 5px;
+  z-index: 1;
 }
 .hero p {
   font-size: 18px;
@@ -451,7 +452,8 @@ button:hover {
   position: relative;
   -o-border-image: linear-gradient(#644CA8, #4862A4) 1;
      border-image: linear-gradient(#644CA8, #4862A4) 1;
-  box-shadow: 10px 0 30px #1a0b25, -10px 0 30px #0a0d36;
+  box-shadow: 10px 0 30px #0a0d36, -10px 0 30px #1a0b25;
+  animation: 5s glowPurple infinite;
 }
 .pricing .pricingContainer .other {
   border: 2px solid #8A8F98;
@@ -464,6 +466,7 @@ button:hover {
   border-radius: 10px;
   margin: 15px 5px;
   transition: 0.5s ease-in-out;
+  position: relative;
 }
 .pricing .pricingContainer .priceOption .topCheck {
   position: absolute;
@@ -565,32 +568,69 @@ button:hover {
 }
 @keyframes glowPurple {
   0% {
-    border-color: #644CA8;
-    box-shadow: 0px 0px 10px #644CA8;
+    box-shadow: 5px 5px 30px #0a0d36, -5px -5px 30px #1a0b25;
   }
   40% {
-    border-color: #644CA8;
-    box-shadow: 0px 0px 10px #644CA8;
-  }
-  42% {
-    border-color: #644CA8;
-    box-shadow: none;
-  }
-  44% {
-    border-color: #644CA8;
-    box-shadow: 0px 0px 10px #644CA8;
-  }
-  46% {
-    border-color: #644CA8;
-    box-shadow: none;
-  }
-  48% {
-    border-color: #644CA8;
-    box-shadow: 0px 0px 10px #644CA8;
+    box-shadow: 20px 20px 30px #0a0d36, -20px -20px 30px #1a0b25;
   }
   100% {
-    border-color: #644CA8;
-    box-shadow: 0px 0px 10px #644CA8;
+    box-shadow: 5px 5px 30px #0a0d36, -5px -5px 30px #1a0b25;
+  }
+}
+.whyUs {
+  margin-top: 50px;
+}
+.whyUs .sellingPoints {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  color: #FAFAFA;
+}
+.whyUs .sellingPoints .section {
+  padding: 8px 0px;
+  max-width: 650px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161B27;
+  border-radius: 15px;
+  margin: 15px 15px;
+  transition: 0.3s ease-in-out;
+}
+.whyUs .sellingPoints .section .fa {
+  font-size: 80px;
+  margin-right: 20px;
+  padding-left: 10px;
+  color: #6d6cad;
+}
+.whyUs .sellingPoints .section .fa-mobile {
+  font-size: 120px;
+}
+.whyUs .sellingPoints .section .text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px 5px;
+}
+.whyUs .sellingPoints .section .text h4 {
+  letter-spacing: 1px;
+  padding: 5px 0px;
+}
+.whyUs .sellingPoints .section .text p {
+  margin-top: 0px;
+}
+.whyUs .sellingPoints .section:hover {
+  box-shadow: 7px 0 15px #4862A4, -7px 0 15px #644CA8;
+}
+
+@media (min-width: 550px) {
+  .whyUs .sellingPoints .section {
+    flex-direction: row;
+  }
+  .whyUs .sellingPoints .section .text {
+    text-align: start;
   }
 }
 .hideOverflowBlue {
@@ -635,6 +675,7 @@ button:hover {
   border-radius: 20px;
   margin: 20px 20px;
   transition: scale 0.2s ease-in-out;
+  text-align: center;
 }
 .ourProcess .processContainer .process span {
   display: flex;
@@ -661,7 +702,8 @@ button:hover {
 }
 .ourProcess .processContainer .process .description {
   text-align: center;
-  padding: 0px 20px;
+  padding: 0px 10px;
+  line-height: 28px;
 }
 .ourProcess .processContainer .process:hover {
   scale: 1.1;
@@ -801,7 +843,7 @@ footer .hours ul li b {
   display: flex;
 }
 .copyright .developer p {
-  font-size: 16px;
+  font-size: 15px;
 }
 .copyright .developer a {
   text-decoration: none;

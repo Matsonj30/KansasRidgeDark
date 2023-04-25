@@ -23,7 +23,7 @@
             width: 200px;
             height: 100%;
             overflow: visible;
-            background-color: $accentColor;
+            background-color: $primaryLight;
             transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
             transform: translateX(200px);
         
@@ -77,7 +77,7 @@
             height: 5px;
             margin-bottom: 5px;
             border-radius: 5px;
-            background-color: $black;
+            background-color: $white;
             transition: 0.3s ease-in;
         
         }
@@ -90,7 +90,7 @@
         }
         input:checked ~ span{
             transform: rotate(45deg) translate(0px, 0px);
-            background-color: $secondaryColor;
+
         }
     
         input:checked ~ span:nth-child(3){

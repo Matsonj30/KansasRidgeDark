@@ -11,7 +11,8 @@
             border: 2px solid $accentColor;
             position: relative;
             border-image: linear-gradient($accentColor, $secondaryColor) 1;
-            box-shadow: 10px 0 30px #1a0b25, -10px 0 30px #0a0d36;
+            box-shadow: 10px 0 30px #0a0d36, -10px 0 30px #1a0b25;
+            animation: 5s glowPurple infinite;
         }
         .other{
             border: 2px solid $grayDark;
@@ -24,7 +25,8 @@
             border-radius: 10px;
             margin: 15px 5px;
             transition: 0.5s ease-in-out;
-
+            position: relative;
+            
             .topCheck{
                 position: absolute;
                 top: 10px;
@@ -33,7 +35,7 @@
                 color: $primaryColor;
             }
             .priceBox{
-              
+        
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -148,31 +150,16 @@
 
 @keyframes glowPurple{
     0%{
-      border-color: $accentColor;
-      box-shadow: 0px 0px 10px $accentColor;
+
+      box-shadow: 5px 5px 30px #0a0d36, -5px -5px 30px #1a0b25;
     }
     40%{
-      border-color: $accentColor;
-      box-shadow: 0px 0px 10px $accentColor;
+
+
+      box-shadow: 20px  20px 30px #0a0d36, -20px  -20px 30px #1a0b25;
     }
-    42%{
-      border-color: $accentColor;
-      box-shadow: none;
-    }
-    44%{
-      border-color: $accentColor;
-      box-shadow: 0px 0px 10px $accentColor;
-    }
-    46%{
-      border-color: $accentColor;
-      box-shadow: none;
-    }
-    48%{
-      border-color: $accentColor;
-      box-shadow: 0px 0px 10px $accentColor;
-    }
+
     100%{
-      border-color: $accentColor;
-      box-shadow: 0px 0px 10px $accentColor;
+        box-shadow: 5px 5px 30px #0a0d36, -5px  -5px 30px #1a0b25;
     }
   }

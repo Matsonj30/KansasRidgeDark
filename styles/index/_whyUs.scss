@@ -1,0 +1,67 @@
+.whyUs{
+    margin-top: 50px;
+
+
+    .sellingPoints{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1500px;
+        color: $white;
+
+
+        .section{
+            padding: 8px 0px;
+            max-width: 650px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #161B27;
+            border-radius: 15px;
+            margin: 15px 15px;
+            transition: 0.3s ease-in-out;
+            .fa{
+                font-size: 80px;
+                margin-right: 20px;
+                padding-left: 10px;
+                color: $accentColorLight;
+            }
+            .fa-mobile{
+                font-size: 120px;
+            }
+            .text{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 0px 5px;
+                h4{
+                    letter-spacing: 1px;
+                    padding: 5px 0px;
+                }
+                p{
+                    margin-top: 0px;
+                }
+            }
+        
+        }
+        .section:hover{
+          
+            box-shadow: 7px 0 15px $secondaryColor, -7px 0 15px $accentColor;
+           // box-shadow: 10px 0 30px #1a0b25, -10px 0 30px #0a0d36;
+        }
+    }
+}
+
+@media(min-width:550px){
+    .whyUs{
+        .sellingPoints{
+            .section{
+                flex-direction: row;
+                .text{
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
