@@ -762,7 +762,7 @@ footer .section ul li a {
   color: #FAFAFA;
 }
 footer .section ul li .fa {
-  color: #644CA8;
+  color: #6d6cad;
 }
 footer .section ul li:hover {
   opacity: 0.4;
@@ -773,10 +773,10 @@ footer .section ul li:first-child:hover {
   cursor: auto;
 }
 footer .section ul li:first-child {
-  color: #644CA8;
+  color: #6d6cad;
 }
 footer .section ul li:first-child b {
-  color: #644CA8;
+  color: #6d6cad;
   font-family: "bold";
 }
 footer .section .fa {

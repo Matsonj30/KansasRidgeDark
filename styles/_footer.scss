@@ -31,7 +31,7 @@ footer{
              
                 }
                 .fa{
-                    color: $accentColor;
+                    color: $accentColorLight;
                 }
             }
             li:hover{
@@ -43,9 +43,9 @@ footer{
                 cursor: auto;
             }
             li:first-child{
-                color: $accentColor;
+                color: $accentColorLight;
                 b{
-                    color: $accentColor;
+                    color: $accentColorLight;
                     font-family: "bold";
                 }
             }
