@@ -356,7 +356,7 @@ button:hover {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 300px;
+  min-height: 180px;
   border-radius: 20px;
   scroll-snap-align: start;
   margin: 0px 50px;
