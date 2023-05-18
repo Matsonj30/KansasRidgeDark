@@ -186,7 +186,7 @@ button:hover {
   transform: translateX(200px);
 }
 .navigationBar #menu ul {
-  padding-top: 100px;
+  padding-top: 150px;
   list-style: none;
   text-align: center;
 }
@@ -205,7 +205,6 @@ button:hover {
 .hamburgerMenu {
   position: absolute;
   z-index: 20;
-  top: 40px;
   right: 30px;
 }
 .hamburgerMenu input {
@@ -244,6 +243,11 @@ button:hover {
   transform: rotate(-45deg) translate(-5px, 4px);
 }
 
+@media (min-width: 377px) {
+  .navigationBar #menu ul {
+    padding-top: 120px;
+  }
+}
 @media (min-width: 1000px) {
   .specialOffer {
     justify-content: flex-end;

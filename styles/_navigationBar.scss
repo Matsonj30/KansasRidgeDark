@@ -46,45 +46,44 @@
         top: 20px;
 
     }
-        #menu{
-            position: fixed;
-            z-index: 20;
-            top: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 200px;
-            height: 100%;
-            overflow: visible;
-            background-color: $primaryLight;
-            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-            transform: translateX(200px);
-        
-            ul{
-                padding-top: 100px;
-                list-style: none;
-                text-align: center;
-                li{
-                    padding-bottom: 30px;
-                    width: 160px;
-                    text-align: end;
-                    font-family: "bold";
-                    font-weight: 600;
-                    text-decoration: none;
-                    font-size: 25px;
-                    color: $white;
-                    letter-spacing: 1px;
-                }
+    #menu{
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 100%;
+        overflow: visible;
+        background-color: $primaryLight;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transform: translateX(200px);
+    
+        ul{
+            padding-top: 150px;
+            list-style: none;
+            text-align: center;
+            li{
+                padding-bottom: 30px;
+                width: 160px;
+                text-align: end;
+                font-family: "bold";
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 25px;
+                color: $white;
+                letter-spacing: 1px;
             }
         }
     }
-    .hamburgerMenu{
+}
+.hamburgerMenu{
         position: absolute;
         z-index: 20;
-        top: 40px;
         right: 30px;
-        
+
 
         input{
             opacity: 50%;
@@ -128,6 +127,16 @@
         }
     }
 
+
+@media(min-width:377px){
+    .navigationBar{
+        #menu{
+            ul{
+                padding-top: 120px;
+            }
+        }
+    }
+}
 
 @media(min-width: 1000px){
     .specialOffer{
