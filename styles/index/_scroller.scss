@@ -42,7 +42,7 @@
             box-shadow: 100px 0 200px #1a0b25, -100px 0 200px #191b35;
             border-radius: 20px;
             img{
-  
+                
                 width: 100%;
                 object-fit: cover;
                 min-height: 180px;
@@ -93,7 +93,7 @@
         #imageContainer{
             img{
                 height: auto;
-                object-fit: unset;
+                
             }
         }
      }
@@ -117,7 +117,7 @@
            
             img{
                 width: 1000px;
-                object-fit: unset;
+                object-fit: cover;
                 margin: 0px 100px;
             }
         }

@@ -432,8 +432,6 @@ button:hover {
 @media (min-width: 600px) {
   .paginator .scrollContainer #imageContainer img {
     height: auto;
-    -o-object-fit: unset;
-       object-fit: unset;
   }
 }
 @media (min-width: 1200px) {
@@ -450,8 +448,8 @@ button:hover {
   }
   .paginator .scrollContainer #imageContainer img {
     width: 1000px;
-    -o-object-fit: unset;
-       object-fit: unset;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin: 0px 100px;
   }
   .paginator .scrollContainer #imageContainer::-webkit-scrollbar {
@@ -916,4 +914,4 @@ footer .contact ul {
 }
 .copyright .developer a:hover {
   opacity: 0.5;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=style.css.map */
