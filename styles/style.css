@@ -448,8 +448,6 @@ button:hover {
   }
   .paginator .scrollContainer #imageContainer img {
     width: 1000px;
-    -o-object-fit: cover;
-       object-fit: cover;
     margin: 0px 100px;
   }
   .paginator .scrollContainer #imageContainer::-webkit-scrollbar {
@@ -458,11 +456,12 @@ button:hover {
 }
 @media (min-width: 1400px) {
   .paginator .scrollContainer #imageContainer {
-    width: 1200px;
+    width: 1180px;
+    max-height: 650px;
   }
   .paginator .scrollContainer #imageContainer img {
     height: auto;
-    width: 1200px;
+    width: 1180px !important;
   }
 }
 .hideOverflowPurple {
